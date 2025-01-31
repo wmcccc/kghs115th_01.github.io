@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Mochiy+Pop+P+One&family=Rampart+One&family=Reggae+One&family=Yusei+Magic&display=swap');
-/* Yusei Magic黑板字   Reggae One炫泡   Rampart One中空   DotGothic16八碧特   Mochiy Pop P One普通粗體*/
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=DotGothic16&family=Kaisei+Decol&family=Mochiy+Pop+P+One&family=Reggae+One&family=Yusei+Magic&family=Zen+Kurenaido&display=swap');
+/*Dela Gothic One粗體扁體 Zen Kurenaido竹風體 Kaisei Decol圓角 Yusei Magic黑板字   Reggae One炫泡   Rampart One中空   DotGothic16八碧特   Mochiy Pop P One普通粗體*/
 
 body {
     background-color:#003366;
@@ -38,17 +38,24 @@ header a:hover {
     background-color:#99CCFFd0;
 }
 
-.blue{
-    background-color: #6699cc00;
-    border-width: 0;
-    color:#92eeee;
-    font-weight: bold;
-}
-.blue:hover {
-    color:#e9faffd0;
+#changecolor {
+    color:black;
     cursor: pointer;
+    display:flex;
 }
 
+#changecolor:hover {
+    background-color:#b7c0b7a9;
+}
+
+#headimg {
+    width:70vw;
+    height:auto;
+    max-width:70%;
+    max-height:100vh;
+    border-radius: 10px;
+    margin:30px;
+}
 
 h1 {
     text-align: center;
@@ -89,7 +96,7 @@ h1 {
 }
 
 .navbar{
-    font-family: 'Mochiy Pop P One';
+    font-family: 'Kaisei Decol',sans-serif;
     position:relative;
     left:0;
     height: 100vh;
@@ -114,6 +121,7 @@ h1 {
 }
 
 .description {
+    font-family: 'Kaisei Decol',sans-serif;
     position:absolute;
     top:100px;
     left:200px;
@@ -145,6 +153,10 @@ h1 {
 
 .description a:hover{
     text-decoration: underline;
+}
+
+.description pre {
+    font-family: 'Zen Kurenaido',sans-serif;
 }
 
 .context pre{
@@ -179,6 +191,7 @@ h1 {
     height:150px;
     border-radius: 50px;
     align-items: center;
+    margin:5vh;
 }
 
 .container3 {
@@ -209,4 +222,14 @@ h1 {
     background-color: #92eeee;
     color:black;
     padding: 10px 15px;    
+}
+
+#codebtn {
+    background-color: #CCFFFF;
+    padding:20px;
+    font-size:medium;
+}
+
+#codebtn:hover {
+    background-color:#92eeee;
 }
