@@ -1,98 +1,130 @@
 const darkcolor = {
-    'body':{
-        'backgroundColor':'#003366',
+    'body': {
+        'backgroundColor': 'black',
+        'color': 'white'
+    },
+    '#headimg h3': {
+        'backgroundColor': '#92eeee82',
+        'color': 'black'
+    },
+    'a': {
         'color':'white'
     },
-    'header':{
-        'backgroundColor':'#6699CCd0',
-        'color':'black'
+    'h1': {
+        'color': '#FFFFCC'
     },
-    'header a:hover':{
-        'backgroundColor':'#99CCFFd0',
+    '.navbar a': {
+        'color': 'white',
     },
-    'h1':{
-        'color':'#FFFFCC'
+    '.card': {
+        'borderColor': '#CCFFFF'
     },
-    '.card':{
-        'borderColor':'#CCFFFF'
+    '.description':{
+        'color':'white'
     },
-    '.navbar a':{
-        'backgroundColor':'#031527d0',
+    '.ques': {
+        'backgroundColor': '#92eeee',
+        'color': 'black'
     },
-    '.navbar a:hover':{
-        'backgroundColor':'#184f87d0',
-    },
-    '.ques':{
-        'backgroundColor':'#92eeee',
-        'color':'black'
-    },
-    '.ans':{
-        'backgroundColor':'#92eeee',
-        'color':'black'
+    '.ans': {
+        'backgroundColor': '#92eeee',
+        'color': 'black'
     }
 };
 
 const brightcolor = {
-    'body':{
-        'backgroundColor':'#F0E4D4',
+    'body': {
+        'backgroundColor': '#f1f8f9',
+        'color': 'black'
+    },
+    '#headimg h3': {
+        'backgroundColor': '#A1D8E8',
+        'color': 'white'
+    },
+    'a': {
         'color':'black'
     },
-    'header':{
-        'backgroundColor':'#C9AB9B',
+    'h1': {
+        'color': '#8cb9e6' // 馬卡龍藍
+    },
+    '.navbar a': {
+        'color': 'white',
+    },
+    '.card': {
+        'borderColor': '#A9D8E4' // 淺藍邊框
+    },
+    '.description':{
         'color':'black'
     },
-    'header a:hover':{
-        'backgroundColor':'white',
+    '.ques': {
+        'backgroundColor': '#F7D1E0', // 淺粉色背景
+        'color': 'black'
     },
-    'h1':{
-        'color':'#917B56'
+    '.ans': {
+        'backgroundColor': '#F3C6A0', // 馬卡龍橘黃色背景
+        'color': 'black'
     },
-    '.card':{
-        'borderColor':'#D18063'
-    },
-    '.navbar a':{
-        'backgroundColor':'#A2B59F',
-    },
-    '.navbar a:hover':{
-        'backgroundColor':'#D2D5B8',
-    },
-    '.ques':{
-        'backgroundColor':'#F6B99D',
-        'color':'black'
-    },
-    '.ans':{
-        'backgroundColor':'#EECFBB',
-        'color':'black'
-    },
-    'a':{
-        'color':'black'
+    'a': {
+        'color': 'black' // 所有連結文字為黑色
     }
 };
 
+// 用於存儲當前狀態
 let isBright = true;
 
+// 將配色保存到localStorage
+function saveColorScheme(isBright) {
+    localStorage.setItem('isBright', isBright);
+}
+
+// 讀取並應用配色
+function applyColorScheme() {
+    const savedColorScheme = localStorage.getItem('isBright');
+    if (savedColorScheme !== null) {
+        isBright = JSON.parse(savedColorScheme); // 轉為boolean類型
+    }
+
+    const colorScheme = isBright ? brightcolor : darkcolor;
+    for (let selector in colorScheme) {
+        let elements = document.querySelectorAll(selector);
+        elements.forEach(element => {
+            let styles = colorScheme[selector];
+            for (let style in styles) {
+                element.style[style] = styles[style];
+            }
+        });
+    }
+}
+
+// 切換配色並保存狀態
 function changeColor(){
-    const colorScheme = isBright ? darkcolor : brightcolor; // ?後面第一個是False 第二個是True
+    isBright = !isBright;
+    const colorScheme = isBright ? brightcolor : darkcolor;
     for (let selector in colorScheme){
         let elements=document.querySelectorAll(selector);
-        elements.forEach(element =>{
-            let styles=color[selector];
+        elements.forEach(element => {
+            let styles=colorScheme[selector];
             for (let style in styles){
                 element.style[style]=styles[style];
             }
         });
     }
-    isBright=!isBright; 
+    saveColorScheme(isBright);
 }
 
-document.addEventListener('DOMContentLoaded',()=>{
-    const button=document.querySelector('#changecolor');
-    button.addEventListener('click',changeColor);
-})
+// 頁面載入時應用保存的配色
+document.addEventListener('DOMContentLoaded', () => {
+    applyColorScheme(); // 應用配色
+    const button = document.querySelector('#changecolor');
+    button.addEventListener('click', changeColor);
+});
 
-function scrollToElement(elementId){
-    const element=document.getElementById(elementId);
-    if (element){
-        element.scrollIntoView({behavior:'smooth',block:'start'});
+function toggleText(){
+    var hiddenText = document.getElementById("yesno3");
+    if (hiddenText.style.display=='none' || hiddenText.style.display==''){
+        hiddenText.style.display='block';
+    }
+    else{
+        hiddenText.style.display='none';
     }
 }

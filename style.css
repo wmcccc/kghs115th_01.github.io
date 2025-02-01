@@ -49,9 +49,17 @@ body {
 }
 
 .header img {
-    width:40px;
-    height:40px;
+    width:60px;
+    height:60px;
     border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header img:hover {
+    transform : scale(1.05);
+    transition: transform 0.3s ease;
 }
 
 header a {
@@ -71,10 +79,11 @@ header a:hover {
     color:black;
     cursor: pointer;
     display:flex;
+    border-radius: 50px;
 }
 
 #changecolor:hover {
-    background-color:#b7c0b7a9;
+    background-color:#9ea9d0a9;
 }
 
 #headimg {
@@ -88,12 +97,6 @@ header a:hover {
     flex-wrap:wrap;
 }
 
-#headimg h2 {
-    background-color: #eedf6faf;
-    width:100%;
-    text-align: center;
-    padding:3vh 0;
-}
 
 #headimg h3 {
     background-color: #92eeee82;
@@ -167,9 +170,10 @@ header a:hover {
 }
 
 .navbar{
-    position:relative;
+    position:absolute;
     left:0;
-    height: 100vh;
+    bottom:0;
+    height: 90vh;
     width:max-content;
     display:flex;
     flex-direction: column;
@@ -178,7 +182,7 @@ header a:hover {
 }
 
 .navbar a{
-    color:rgb(255, 255, 255);
+    color:rgb(255, 252, 252);
     background-color: #031527d0;
     display:flex;
     align-items: center;
@@ -190,8 +194,34 @@ header a:hover {
     background-color:#184f87d0;
 }
 
+#yesno3 {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+    color:#000000;
+    background-color: #cef8fb;
+    width:fit-content;
+    font-family: '華康芸風體',sans-serif;
+    display: none;
+    border-width: 10px;
+    padding:10px;
+    margin-top:0;
+}
+
+.hiddenword {
+    color:#000000;
+    cursor: pointer;
+    background-color: #3ce2f0;
+    width:fit-content;
+    padding:10px;
+    margin-bottom: 0;
+}
+
+.hiddenword:hover {
+    background-color: #09afbd;
+}
+
 .description {
-    font-family: '華康雅風體',sans-serif;
+    font-family: '華康秀風體',sans-serif;
     position:absolute;
     top:100px;
     left:200px;
@@ -215,6 +245,7 @@ header a:hover {
 }
 
 .description a{
+    font-family: '華康芸風體',sans-serif;
     color:white;
     text-decoration: none;
     font-size: 30px;
