@@ -4,9 +4,12 @@ const darkcolor = {
         'color': 'white'
     },
     '#headimg h3': {
-        'backgroundColor': '#92eeee82',
+        'backgroundColor': '#0099ff82',
         'color': 'black'
     },
+    "#a4_1 h3" : {
+        'backgroundColor': '#0099ff82',
+    }, 
     'a': {
         'color':'white'
     },
@@ -30,6 +33,7 @@ const darkcolor = {
         'backgroundColor': '#92eeee',
         'color': 'black'
     }
+    
 };
 
 const brightcolor = {
@@ -38,6 +42,10 @@ const brightcolor = {
         'color': 'black'
     },
     '#headimg h3': {
+        'backgroundColor': '#A1D8E8',
+        'color': 'white'
+    },
+    '#a4_1 h3': {
         'backgroundColor': '#A1D8E8',
         'color': 'white'
     },

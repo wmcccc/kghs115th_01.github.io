@@ -43,14 +43,14 @@ body {
     position:sticky;
     top:0;
     width:100%;
-    height:10vh;
+    height:5vh;
     display:flex;
     z-index: 2;
 }
 
 .header img {
-    width:60px;
-    height:60px;
+    width:35px;
+    height:35px;
     border-radius: 50px;
     display: flex;
     align-items: center;
@@ -99,7 +99,7 @@ header a:hover {
 
 
 #headimg h3 {
-    background-color: #92eeee82;
+    background-color: #0099ff82;
     width:90%;
     text-align: center;
     padding:2vh 0;
@@ -173,8 +173,8 @@ header a:hover {
     position:absolute;
     left:0;
     bottom:0;
-    height: 90vh;
-    width:max-content;
+    height: 95vh;
+    width:15vw;
     display:flex;
     flex-direction: column;
     overflow-y:scroll;
@@ -238,10 +238,18 @@ header a:hover {
     border-radius: 30px;
 }
 
-.bigimg:hover {
-    width:170px;
-    height:170px;
-    border-radius: 30px;
+#doll {
+    position:absolute;
+    width:85vw;
+    height:95vh;
+    /* background-color: aquamarine; */
+    display: flex;
+    flex-direction: column;
+    right:0;overflow-y: scroll;
+}
+
+.dolldesc {
+    margin-left: 5vw;
 }
 
 .description a{
@@ -258,6 +266,12 @@ header a:hover {
 
 .description pre {
     font-family: '華康秀風體',sans-serif;
+}
+
+.bigimg:hover {
+    width:170px;
+    height:170px;
+    border-radius: 30px;
 }
 
 .content {
@@ -301,33 +315,31 @@ header a:hover {
 
 .container3 {
     scroll-snap-align: start;
-    text-align: center;
-    border-style: dashed;
-    width:60vw;
+    /* border-style: dashed; */
+    width:70vw;
     margin:10px 20vw;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap:wrap;
 }
 
 .container3 img {
-    width:320px;
-    height:180px;
+    width:60vw;
+    height:auto;
     align-items: center;
     border-radius: 10px;
+    margin:10px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .container3 ul {
     text-align: left;
 }
 
-.ques {
-    background-color: #92eeee;
-    color:black;
-    padding: 10px 15px;
-}
-
-.ans {
-    background-color: #92eeee;
-    color:black;
-    padding: 10px 15px;    
+.container3 h1 {
+    text-decoration: underline;
 }
 
 #codebtn {
@@ -338,4 +350,41 @@ header a:hover {
 
 #codebtn:hover {
     background-color:#92eeee;
+}
+
+#a4_1 img{
+    width:60vw;
+    height:auto;
+    margin-bottom: 5vh;
+}
+
+#a4_1 img:hover {
+    transform: scale(1.1);
+    transition: transform 0.5s;
+}
+
+#a4_1 h3 {
+    background-color: #0099ff82;
+    border-radius: 20px;
+    width:90%;
+    text-align: center;
+    padding:2vh 0;
+}
+
+#a4_1 h3:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s;
+}
+
+
+.footer {
+    position:fixed;
+    right:5vw;
+    bottom:0;
+    margin:0;
+    background-color: rgb(255, 204, 204);
+}
+
+.footer p {
+    font-size:medium;
 }
