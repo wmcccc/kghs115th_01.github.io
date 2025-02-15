@@ -88,40 +88,60 @@ header a:hover {
     background-color:#9ea9d0a9;
 }
 
-#headimg {
-    border-width: 0;
-    margin:30px;
-    border-style: dashed;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap:wrap;
+@keyframes scrollimg {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-50%);
+    }
 }
 
+.container1 {
+    border-style: dotted;
+    width:100%;
+    height:30vh;
+    overflow-y: hidden;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+}
 
-#headimg h3 {
+.runhorselight {
+    display:flex;
+    white-space: nowrap;
+    animation:scrollimg 10s linear infinite; 
+}
+/* 等速 無限循環 */
+
+.runhorselight img {
+    width:auto;
+    height:25vh;
+    margin:3vh;
+    border-radius: 10px;
+}
+
+.runhorselight img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+h2 {
+    text-align: center;
+}
+
+h3 {
     background-color: #0099ff82;
     width:90%;
     text-align: center;
     padding:2vh 0;
 }
 
-#headimg h3:hover {
+h3:hover {
     transform: scale(1.1);
     transition: transform 0.3s;
 }
 
-#headimg img {
-    width:70vw;
-    height:auto;
-    margin:3vh;
-}
-
-#headimg img:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s;
-}
 
 #hometitle {
     text-align: center;
@@ -427,3 +447,5 @@ header a:hover {
 .imgandig {
     display:inline-block;
 }
+
+
