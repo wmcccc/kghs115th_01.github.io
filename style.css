@@ -28,6 +28,16 @@
     font-display:swap;
 }
 
+@font-face {
+    font-family:'Cubic_11';
+    src: url('fonts/Cubic_11.woff2') format('woff2'),
+         url('fonts/Cubic_11.woff') format('woff'),
+         url('fonts/Cubic_11.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display:swap;
+}
+
 html,body {
     background-color:#000000;
     color:white;
@@ -107,7 +117,7 @@ header a:hover {
     display: flex;
     justify-self:center;
     margin:5vh;
-
+    padding-bottom:5vh;
 }
 
 .runhorselight {
@@ -132,12 +142,8 @@ header a:hover {
     transition: transform 0.3s ease;
 }
 
-h2 {
-    display: flex;
-    justify-content: center;
-}
-
 h3 {
+    font-family: 'Cubic_11',sans-serif;
     padding:2vh 0;
     display: inline-block;
     justify-content: start;
@@ -146,6 +152,7 @@ h3 {
 
 h4 {
     display: inline-block;
+    font-family: 'Cubic_11',sans-serif;
 }
 
 .homebtn {
