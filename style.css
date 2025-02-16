@@ -71,10 +71,12 @@ header a {
     text-align: center;
     text-decoration: none;
     padding:10px 20px;
+    white-space: nowrap;
 }
 
 header a:hover {
     background-color:#99CCFFd0;
+    transition: background-color 0.3s ease;
 }
 
 #changecolor {
@@ -118,12 +120,15 @@ header a:hover {
 .runhorselight img {
     width:auto;
     height:25vh;
-    margin:3vh;
+    margin:2.5vh;
     border-radius: 10px;
+    border-color: #92eeee;
+    border-width: 10px;
+    border-style: solid;
 }
 
 .runhorselight img:hover {
-    transform: scale(1.05);
+    transform: scale(1.2);
     transition: transform 0.3s ease;
 }
 
@@ -133,17 +138,11 @@ h2 {
 }
 
 h3 {
-    background-color: #0099ff82;
     width:90%;
     padding:2vh 0;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     margin:5vh auto;
-}
-
-h3:hover {
-    transform: scale(1.1);
-    transition: transform 0.3s;
 }
 
 .homebtn {

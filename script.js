@@ -148,6 +148,13 @@ const anni = document.getElementById("anni");
 const compete = document.getElementById("compete");
 const trip = document.getElementById("trip")
 
+
+otherbtn.addEventListener('DOCContentLoaded', ()=> {
+    other.style.display='block';
+    anni.style.display='none';
+    compete.style.display='none';
+    trip.style.display='none';
+});
 otherbtn.addEventListener('click', ()=> {
     other.style.display='block';
     anni.style.display='none';
@@ -174,4 +181,17 @@ tripbtn.addEventListener('click', ()=> {
     anni.style.display='none';
     compete.style.display='none';
     trip.style.display='block';
+});
+
+const images = document.querySelectorAll('.runhorselight img');
+
+images.forEach( (img) => {
+    img.addEventListener('mouseenter', ()=> {
+        const container = event.target.closest('.runhorselight');
+        container.style.animationPlayState = "paused";
+    });
+    img.addEventListener('mouseleave', ()=> {
+        const container = event.target.closest('.runhorselight');
+        container.style.animationPlayState = "running";
+    });
 });
