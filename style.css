@@ -98,13 +98,14 @@ header a:hover {
 }
 
 .container1 {
-    border-style: dotted;
     width:100%;
     height:30vh;
     overflow-y: hidden;
     white-space: nowrap;
     display: flex;
-    align-items: center;
+    justify-self:center;
+    margin:5vh;
+
 }
 
 .runhorselight {
@@ -127,14 +128,17 @@ header a:hover {
 }
 
 h2 {
-    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 h3 {
     background-color: #0099ff82;
     width:90%;
-    text-align: center;
     padding:2vh 0;
+    display: flex;
+    justify-content: center;
+    margin:5vh auto;
 }
 
 h3:hover {
@@ -142,6 +146,29 @@ h3:hover {
     transition: transform 0.3s;
 }
 
+.homebtn {
+    font-family: '華康芸風體',sans-serif;
+    font-size: 30px;
+    display: inline-block;
+    background-color: #bad4f0;
+    border-radius: 20px;
+    white-space: nowrap;
+    padding:10px 20px;
+    margin:0 2.5vw;
+}
+
+.homebtn:hover {
+    background-color: #7f9fc2;
+    transition: background-color 0.3s ease;
+}
+
+#other{
+    display: block;
+}
+
+#anni,#compete,#trip {
+    display: none;
+}
 
 #hometitle {
     text-align: center;

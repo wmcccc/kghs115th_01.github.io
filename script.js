@@ -136,3 +136,42 @@ function toggleText(){
         hiddenText.style.display='none';
     }
 }
+
+// button
+const otherbtn = document.getElementById("btn-other");
+const annibtn = document.getElementById("btn-anni");
+const competebtn = document.getElementById("btn-compete");
+const tripbtn = document.getElementById("btn-trip");
+//
+const other = document.getElementById("other");
+const anni = document.getElementById("anni");
+const compete = document.getElementById("compete");
+const trip = document.getElementById("trip")
+
+otherbtn.addEventListener('click', ()=> {
+    other.style.display='block';
+    anni.style.display='none';
+    compete.style.display='none';
+    trip.style.display='none';
+});
+
+annibtn.addEventListener('click', ()=> {
+    other.style.display='none';
+    anni.style.display='block';
+    compete.style.display='none';
+    trip.style.display='none';
+});
+
+competebtn.addEventListener('click', ()=> {
+    other.style.display='none';
+    anni.style.display='none';
+    compete.style.display='block';
+    trip.style.display='none';
+});
+
+tripbtn.addEventListener('click', ()=> {
+    other.style.display='none';
+    anni.style.display='none';
+    compete.style.display='none';
+    trip.style.display='block';
+});
