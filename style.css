@@ -138,11 +138,14 @@ h2 {
 }
 
 h3 {
-    width:90%;
     padding:2vh 0;
-    display: flex;
+    display: inline-block;
     justify-content: start;
     margin:5vh auto;
+}
+
+h4 {
+    display: inline-block;
 }
 
 .homebtn {

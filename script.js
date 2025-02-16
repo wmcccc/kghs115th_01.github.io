@@ -189,9 +189,38 @@ images.forEach( (img) => {
     img.addEventListener('mouseenter', ()=> {
         const container = event.target.closest('.runhorselight');
         container.style.animationPlayState = "paused";
+
+        //改<h4>
+        const title = event.target.closest('.container1').parentElement.querySelector('h4');
+        const currentimg = event.target.src;
+        if (currentimg.includes("images/others1.png"))title.textContent = "新生訓練";
+        else if (currentimg.includes("images/others2.png")) title.textContent = "高一下期末";
+        else if (currentimg.includes("images/others3.png")) title.textContent = "日本交流";
+        else if (currentimg.includes("images/99ani_1.png")) title.textContent = "99 - 高一校慶!";
+        else if (currentimg.includes("images/99ani_2.png")) title.textContent = "99 - 三代同堂";
+        else if (currentimg.includes("images/100ani_1.png")) title.textContent = "100 - 化妝遊行";
+        else if (currentimg.includes("images/100ani_2.png")) title.textContent = "100 - 精神總錦標!";
+        else if (currentimg.includes("images/100ani_3.png")) title.textContent = "100 - 園遊會";
+        else if (currentimg.includes("images/100ani_4.png")) title.textContent = "100 - 精神總錦標之冰淇淋";
+        else if (currentimg.includes("images/100ani.png")) title.textContent = "100 - 愛河路跑";
+        else if (currentimg.includes("images/trip1.png")) title.textContent = "20231229 - 中央公園班遊";
+        else if (currentimg.includes("images/trip2.png")) title.textContent = "暑假班遊 - 草悟道";
+        else if (currentimg.includes("images/trip3.png")) title.textContent = "暑假班遊 - 麗寶樂園";
+        else if (currentimg.includes("images/trip4.png")) title.textContent = "暑假班遊 - 高美濕地";
+        else if (currentimg.includes("images/tabletennis.png")) title.textContent = "班際桌球";
+        else if (currentimg.includes("images/badminton1.png")) title.textContent = "班際羽球-冠軍!";
+        else if (currentimg.includes("images/badminton2.png")) title.textContent = "班際羽球";
+        else if (currentimg.includes("images/badminton3.png")) title.textContent = "班際羽球";
+        else if (currentimg.includes("images/basketball1.png")) title.textContent = "班際籃球";
+        else if (currentimg.includes("images/basketball2.png")) title.textContent = "班際籃球";
+        else if (currentimg.includes("images/basketball3.png")) title.textContent = "班際籃球";
     });
     img.addEventListener('mouseleave', ()=> {
         const container = event.target.closest('.runhorselight');
         container.style.animationPlayState = "running";
+
+        //改<h4>
+        const title = event.target.closest('.container1').parentElement.querySelector('h4');
+        title.textContent = "";
     });
 });
