@@ -38,6 +38,27 @@
     font-display:swap;
 }
 
+@media (max-width:600px) {
+    header {
+        height:10vh;
+    }
+    header img {
+        width:10vh;
+        height:10vh;
+    }
+    .navbar {
+        height:90vh;
+    }
+    .student {
+        height:90vh;
+    }
+    #igs img {
+        width: 70px;
+        height: 70px;
+        margin:5px 15px;
+    }
+}
+
 html,body {
     background-color:#000000;
     color:white;
