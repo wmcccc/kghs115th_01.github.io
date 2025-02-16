@@ -32,6 +32,9 @@ const darkcolor = {
     '.ans': {
         'backgroundColor': '#92eeee',
         'color': 'black'
+    },
+    '.runhorselight img': {
+        'borderColor': 'white'
     }
     
 };
@@ -74,11 +77,14 @@ const brightcolor = {
     },
     'a': {
         'color': 'black' // 所有連結文字為黑色
+    },
+    '.runhorselight img': {
+        'borderColor': '#031527'
     }
 };
 
 // 用於存儲當前狀態
-let isBright = true;
+let isBright = false;
 
 // 將配色保存到localStorage
 function saveColorScheme(isBright) {
@@ -208,12 +214,11 @@ images.forEach( (img) => {
         else if (currentimg.includes("images/trip3.png")) title.textContent = "暑假班遊 - 麗寶樂園";
         else if (currentimg.includes("images/trip4.png")) title.textContent = "暑假班遊 - 高美濕地";
         else if (currentimg.includes("images/tabletennis.png")) title.textContent = "班際桌球";
-        else if (currentimg.includes("images/badminton1.png")) title.textContent = "班際羽球-冠軍!";
-        else if (currentimg.includes("images/badminton2.png")) title.textContent = "班際羽球";
-        else if (currentimg.includes("images/badminton3.png")) title.textContent = "班際羽球";
-        else if (currentimg.includes("images/basketball1.png")) title.textContent = "班際籃球";
-        else if (currentimg.includes("images/basketball2.png")) title.textContent = "班際籃球";
-        else if (currentimg.includes("images/basketball3.png")) title.textContent = "班際籃球";
+        else if (currentimg.includes("images/badminton1.png")) title.textContent = "班際羽球-vs203";
+        else if (currentimg.includes("images/badminton2.png")) title.textContent = "班際羽球-vs206";
+        else if (currentimg.includes("images/badminton3.png")) title.textContent = "班際羽球-vs209";
+        else if (currentimg.includes("images/basketball1.png")) title.textContent = "班際籃球-vs110";
+        else if (currentimg.includes("images/basketball2.png")) title.textContent = "班際籃球-vs112";
     });
     img.addEventListener('mouseleave', ()=> {
         const container = event.target.closest('.runhorselight');
