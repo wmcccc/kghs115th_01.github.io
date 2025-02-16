@@ -38,30 +38,6 @@
     font-display:swap;
 }
 
-@media (max-width:600px) {
-    header {
-        height:10vh;
-    }
-    header img {
-        width:10vh;
-        height:10vh;
-    }
-    .navbar {
-        height:90vh;
-    }
-    .student {
-        height:90vh;
-    }
-    #igs img {
-        width: 50px;
-        height: 50px;
-        margin:5px 15px;
-    }
-    .header a {
-        width:15vw;
-    }
-}
-
 html,body {
     background-color:#000000;
     color:white;
@@ -74,7 +50,7 @@ html,body {
     overflow-x: hidden;
 }
 
-.header{
+header{
     background-color:#6699CCd0;
     position:fixed;
     top:0;
@@ -84,13 +60,12 @@ html,body {
     z-index: 2;
 }
 
-.header img {
+header img {
     width:5vh;
     height:5vh;
     border-radius: 50px;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-self: center;
 }
 
 header a {
@@ -111,7 +86,7 @@ header a:hover {
     color:black;
     cursor: pointer;
     display:flex;
-    border-radius: 50px;
+    border-radius: 30px;
     margin-left: auto;
 }
 
@@ -216,7 +191,7 @@ h4 {
     font-weight: thin;
     font-size: 60px;
     color:inherit;
-    padding:5vh;
+    margin:6vh 0;
 }
 
 .card-container{
@@ -251,7 +226,7 @@ h4 {
 }
 
 .card img {
-    width:15vw;
+    width:100px;
     height:auto;
     border-radius: 50px;
 }
@@ -271,6 +246,10 @@ h4 {
     width: 100px;
     height: 100px;
     margin:10px 25px;
+}
+
+#igs p {
+    font-size:small;
 }
 
 @keyframes spinig {
@@ -443,10 +422,20 @@ h4 {
     background-color:#92eeee;
 }
 
+#a4_1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height:auto;
+    margin:5vh;
+}
+
 #a4_1 img{
     width:60vw;
     height:auto;
-    margin-bottom: 5vh;
+    margin: 0 2.5vh;
 }
 
 #a4_1 img:hover {
@@ -454,12 +443,21 @@ h4 {
     transition: transform 0.5s;
 }
 
+#a4_1 h2 {
+    text-align: center;
+    width: 100%;
+    margin:2.5vh auto;
+}
+
 #a4_1 h3 {
     background-color: #0099ff82;
     border-radius: 20px;
     width:90%;
-    text-align: center;
     padding:2vh 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:2.5vh auto;
 }
 
 #a4_1 h3:hover {
@@ -540,4 +538,56 @@ h4 {
     display:inline-block;
 }
 
+@media (max-width:800px) {
+    header {
+        height:10vh;
+    }
+    .navbar {
+        top:10vh;
+        height:90vh;
+        width:15vw;
+        overflow-x: hidden;
+    }
+    .student {
+        height:90vh;
+    }
+    #igs img {
+        width: 50px;
+        height: 50px;
+        margin:5px 15px;
+    }
+    #igs p {
+        font-size:x-small;
+        margin:1vw;
+    }
 
+    header a {
+        width:10vw;
+    }
+    #changecolor {
+        width:9vw;
+    }
+    #hometitle {
+        margin:11vh 0;
+    }
+    #doll {
+        margin-top:10vh;
+    }
+    .content {
+        margin-top:10vh;
+    }
+    #a4_1 {
+        margin-top: 10vh;
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        align-items: center; 
+    }
+    #a4_1 img{
+        width:100%;
+        margin:2.5vh 0;
+    }
+    #a4_1 h3 {
+        width:90vw;
+    }
+}
