@@ -1,7 +1,7 @@
 const darkcolor = {
     'body': {
-        'backgroundColor': 'black',
-        'color': 'white'
+        'backgroundColor': '#1E1E1E',  // VS Code 主背景色
+        'color': '#D4D4D4'  // 主要文字顏色
     },
     '#headimg h3': {
         'backgroundColor': '#0099ff82',
@@ -11,19 +11,19 @@ const darkcolor = {
         'backgroundColor': '#0099ff82',
     }, 
     'a': {
-        'color':'white'
+        'color':'#D4D4D4'
     },
     'h1': {
         'color': '#FFFFCC'
     },
     '.navbar a': {
-        'color': 'white',
+        'color': '#D4D4D4',
     },
     '.card': {
         'borderColor': '#CCFFFF'
     },
     '.description':{
-        'color':'white'
+        'color':'#D4D4D4'
     },
     '.ques': {
         'backgroundColor': '#92eeee',
@@ -34,7 +34,7 @@ const darkcolor = {
         'color': 'black'
     },
     '.runhorselight img': {
-        'borderColor': 'white'
+        'borderColor': '#D4D4D4'
     }
     
 };
@@ -42,7 +42,7 @@ const darkcolor = {
 const brightcolor = {
     'body': {
         'backgroundColor': '#f1f8f9',
-        'color': 'black'
+        'color': '#1E1E1E'
     },
     '#headimg h3': {
         'backgroundColor': '#A1D8E8',
@@ -53,10 +53,10 @@ const brightcolor = {
         'color': 'white'
     },
     'a': {
-        'color':'black'
+        'color':'#1E1E1E'
     },
     'h1': {
-        'color': '#8cb9e6' // 馬卡龍藍
+        'color': '#031527' // 馬卡龍藍
     },
     '.navbar a': {
         'color': 'white',
@@ -65,18 +65,18 @@ const brightcolor = {
         'borderColor': '#A9D8E4' // 淺藍邊框
     },
     '.description':{
-        'color':'black'
+        'color':'#1E1E1E'
     },
     '.ques': {
         'backgroundColor': '#F7D1E0', // 淺粉色背景
-        'color': 'black'
+        'color': '#1E1E1E'
     },
     '.ans': {
         'backgroundColor': '#F3C6A0', // 馬卡龍橘黃色背景
-        'color': 'black'
+        'color': '#1E1E1E'
     },
     'a': {
-        'color': 'black' // 所有連結文字為黑色
+        'color': '#1E1E1E' // 所有連結文字為黑色
     },
     '.runhorselight img': {
         'borderColor': '#031527'
@@ -123,6 +123,9 @@ function changeColor(){
             }
         });
     }
+
+    const button = document.querySelector('#changecolor');
+    button.src=isBright ? 'elements/light.png' : 'elements/dark.png';
     saveColorScheme(isBright);
 }
 
@@ -131,6 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
     applyColorScheme(); // 應用配色
     const button = document.querySelector('#changecolor');
     button.addEventListener('click', changeColor);
+    button.src=isBright ? 'elements/light.png' : 'elements/dark.png';
 });
 
 function toggleText(){

@@ -69,11 +69,6 @@ html,body {
     justify-content: center;
 }
 
-.header img:hover {
-    transform : scale(1.05);
-    transition: transform 0.3s ease;
-}
-
 header a {
     color:black;
     display:flex;
@@ -94,10 +89,11 @@ header a:hover {
     cursor: pointer;
     display:flex;
     border-radius: 50px;
+    margin-left: auto;
 }
 
 #changecolor:hover {
-    background-color:#9ea9d0a9;
+    background-color:#99CCFFd0;
 }
 
 @keyframes scrollimg {
@@ -156,22 +152,31 @@ h4 {
 }
 
 .homebtn {
-    font-family: '華康芸風體',sans-serif;
+    font-family: 'Cubic_11',sans-serif;
     display: inline-block;
-    background-color: #bad4f0;
-    border-radius: 20px;
-    white-space: nowrap;
-    padding:2vw 2.5vw;
     margin:0 2.5vw;
-    width: 15vw;
-    font-size:100%;
+    position:relative
+}
+
+.homebtn::after {
+    content:"";
+    position:absolute;
+    width:0%;
+    left:0;
+    bottom:0;
+    height:2px;
+    background-color:white;
+    transition:width 0.3s ease-out;
 }
 
 .homebtn:hover {
-    background-color: #7f9fc2;
-    transition: background-color 0.3s ease;
     transform: scale(1.1);
-    transition: transform 0.3s ease;
+    transition: background-color 0.3s ease,transform 0.3s ease;
+    cursor: pointer;
+}
+
+.homebtn:hover::after {
+    width:100%;
 }
 
 #other{
@@ -187,7 +192,7 @@ h4 {
     font-family: '華康秀風體',sans-serif;
     font-weight: thin;
     font-size: 60px;
-    color:#FFFFCC;
+    color:inherit;
     padding:5vh;
 }
 
@@ -225,12 +230,37 @@ h4 {
 .card img {
     width:15vw;
     height:auto;
-    border-radius: 30px;
+    border-radius: 50px;
 }
 
 .card img:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
     transition: transform 0.3s;
+    animation: spinig 1.5s infinite;
+}
+
+#igs {
+    display: flex;
+    flex-direction: row;
+}
+
+#igs img {
+    width: 100px;
+    height: 100px;
+    margin:10px 25px;
+}
+
+@keyframes spinig {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#igs img:hover {
+    animation: spinig 1.5s infinite;
 }
 
 .navbar{
