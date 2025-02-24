@@ -1,8 +1,6 @@
 @font-face {
     font-family:'粉圓體';
-    src: url('fonts/粉圓體.woff2') format('woff2'),
-         url('fonts/粉圓體.woff') format('woff'),
-         url('fonts/粉圓體.ttf') format('truetype');
+    src: url('fonts/粉圓體.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display:swap;
@@ -10,9 +8,7 @@
 
 @font-face {
     font-family:'華康秀風體';
-    src: url('fonts/華康秀風體.woff2') format('woff2'),
-         url('fonts/華康秀風體.woff') format('woff'),
-         url('fonts/華康秀風體.ttf') format('truetype');
+    src: url('fonts/華康秀風體.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display:swap;
@@ -20,9 +16,7 @@
 
 @font-face {
     font-family:'華康芸風體';
-    src: url('fonts/華康芸風體.woff2') format('woff2'),
-         url('fonts/華康芸風體.woff') format('woff'),
-         url('fonts/華康芸風體.ttf') format('truetype');
+    src: url('fonts/華康芸風體.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display:swap;
@@ -30,16 +24,14 @@
 
 @font-face {
     font-family:'Cubic_11';
-    src: url('fonts/Cubic_11.woff2') format('woff2'),
-         url('fonts/Cubic_11.woff') format('woff'),
-         url('fonts/Cubic_11.ttf') format('truetype');
+    src: url('fonts/Cubic_11.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display:swap;
 }
 
 html,body {
-    background-color:#000000;
+    background-color:#1E1E1E;
     color:white;
     font-size:x-large;
     margin:0;
@@ -75,6 +67,7 @@ header a {
     text-decoration: none;
     padding:10px 20px;
     white-space: nowrap;
+    background-color: none;
 }
 
 header a:hover {
@@ -134,6 +127,11 @@ header a:hover {
 .runhorselight img:hover {
     transform: scale(1.2);
     transition: transform 0.3s ease;
+}
+
+h1 {
+    font-family: 'Cubic_11';
+    text-align: center;
 }
 
 h3 {
@@ -283,7 +281,9 @@ h4 {
     display:flex;
     align-items: center;
     text-decoration: none;
+    white-space: nowrap;
     padding:10px 20px;
+    font-size: small;
 }
 
 .navbar a:hover{
@@ -413,13 +413,13 @@ h4 {
 }
 
 #codebtn {
-    background-color: #CCFFFF;
+    color: #CCFFFF;
     padding:20px;
     font-size:medium;
 }
 
 #codebtn:hover {
-    background-color:#92eeee;
+    color:#92eeee;
 }
 
 #a4_1 {
@@ -478,16 +478,6 @@ h4 {
     font-size:medium;
 }
 
-.people {
-    position:relative;
-    display:flex;
-    flex-direction: row;
-    margin-left: 15vw;
-    margin-bottom: 10vh;
-    width:85vw;
-    height: auto;
-}
-
 #doll {
     position:relative;
     width:85vw;
@@ -496,27 +486,6 @@ h4 {
     display: flex;
     flex-direction: column;
     margin-left:auto;
-}
-
-.text {
-    font-family: '華康秀風體',sans-serif;
-    width:50vw;
-    height:max-content;
-    display:inline-block;
-    margin-left:5vw;
-}
-
-.text a:hover {
-    color:#3ce2f0;
-    transform:scale(1.1);
-    transition: transform 0.3s ease;
-}
-
-.img201 {
-    width :130px;
-    height:130px;
-    border-radius: 10px;
-    margin-left: 5vw;
 }
 
 .igimg {
@@ -536,6 +505,139 @@ h4 {
 
 .imgandig {
     display:inline-block;
+}
+
+#members {
+    width:100%;
+    height:95vh;
+    position:absolute;
+    top:5vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li {
+    list-style: none;
+    margin:10px;
+}
+
+#members a{
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    padding: 2px;
+}
+
+#members a:hover::after{
+    width:100%;
+    color: lightgrey;
+}
+
+#members a::after {
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:0;
+    height:2px;
+    background-color: lightgrey;;
+    transition:0.3s;
+}
+
+.people {
+    background: #111010;
+    width:400px;
+    height:300px;
+    margin:100px 30px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.people::after {
+    content:"";
+    width:400px;
+    height:300px;
+    padding:3px;
+    border-radius: 15px;
+    background: linear-gradient(to right, blue,red);
+    position:absolute;
+    z-index:-1;
+    opacity: 0.5;
+}
+
+.people ul li::before{
+    content:"# "
+}
+
+.people ul li {
+    font-size:20px;
+}
+
+.nameandicon {
+    /* position:relative; */
+    display: flex;
+    flex-direction: row;
+    width:400px;
+    height:200px;
+    align-items: center;
+    background: hotpink;
+}
+
+.nameandicon img {
+    width :110px;
+    height:110px;
+    border-radius: 10px;
+    margin-left:30px;
+}
+
+.nameandicon p {
+    font-size:42px;
+    margin-left:50px;
+}
+
+#people-container {
+    /* border: 2px dashed red; */
+    position: absolute;
+    top:10vh;
+    left:15vw;
+    height:90vh;
+    width:85vw;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-wrap:wrap;
+}
+
+.name {
+    font-family: 'Cubic_11',sans-serif;
+    font-weight: bold;
+}
+
+.text {
+    font-family: '華康秀風體',sans-serif;
+    width:400px;
+    height:200px;
+    display:inline-block;
+    background-color: yellow !important;
+}
+
+.back {
+    font-family: 'Cubic_11';
+    padding:5px;
+    margin:10px;
+    display: flex;
+    justify-self: flex-end;
+    background: #e5fca6;
+}
+
+.back:hover {
+    background :#c1ff72;
+    transform:scale(1.05);
+    transition: transform 0.3s ease;
 }
 
 @media (max-width:1100px) {
@@ -589,5 +691,9 @@ h4 {
     }
     #a4_1 h3 {
         width:90vw;
+    }
+    #members {
+        top:10vh;
+        height:90vh;
     }
 }
